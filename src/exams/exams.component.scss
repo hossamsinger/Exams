@@ -1,0 +1,44 @@
+.card {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+  
+    .card-header {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+  
+    .card-body {
+      font-size: 0.9rem;
+  
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
+  
+    .card-footer {
+      button {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  
+  .container {
+    margin-top: 1rem;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .col-md-4 {
+    display: flex;
+  }
+  

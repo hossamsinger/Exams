@@ -1,0 +1,29 @@
+<!-- @ dscription Here....
+ This IS A Description For Starndered Question .....
+ Question Section -->
+
+<div class="container">
+    <div class="question-container">
+      <div class="question-title">
+          {{ AllQuestion.title }}
+      </div>
+      <!-- <div *ngFor="let choice of AllQuestion.choises; let i = index" class="form-check d-flex flex-wrap">
+        <input
+          class="form-check-input"
+          type="radio"
+          [name]="'question' + AllQuestion.id"
+          [id]="'choice' + AllQuestion.id + i"
+        />
+        <label class="form-check-label" [for]="'choice' + AllQuestion.id + i">
+          {{ choice }}
+        </label>
+      </div> -->
+      <p><strong>Correct Answer:</strong> {{ AllQuestion.choises[AllQuestion.correctedAnswer - 1] }}</p>
+      <p><strong>Category:</strong> {{ AllQuestion.category }}</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-success">update</button>
+          <button type="button" class="btn btn-danger">Delet</button>
+        </div>
+    </div>
+    
+</div>

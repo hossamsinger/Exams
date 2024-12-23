@@ -1,0 +1,43 @@
+  <div class="result-container">
+  <table mat-table [dataSource]="results" class="mat-elevation-z8" matSort>
+    <!-- Test Name Column -->
+    <ng-container matColumnDef="testName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Test Name </th>
+      <td mat-cell *matCellDef="let result"> {{ result.testName }} </td>
+    </ng-container>
+
+    <!-- User Name Column -->
+    <ng-container matColumnDef="userName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> User Name </th>
+      <td mat-cell *matCellDef="let result"> {{ result.userName }} </td>
+    </ng-container>
+
+    <!-- Total Questions Column -->
+    <ng-container matColumnDef="totalQuestions">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Questions </th>
+      <td mat-cell *matCellDef="let result"> {{ result.totalQuestions }} </td>
+    </ng-container>
+
+    <!-- Correct Answers Column -->
+    <ng-container matColumnDef="correctAnswers">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Correct Answers </th>
+      <td mat-cell *matCellDef="let result"> {{ result.correctAnswers }} </td>
+    </ng-container>
+
+    <!-- Percentage Column -->
+    <ng-container matColumnDef="percentage">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Percentage </th>
+      <td mat-cell *matCellDef="let result"> {{ result.percentage }} </td>
+    </ng-container>
+
+    <!-- Header and Row Definitions -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns;"
+      class="mat-row"
+      [class.alt-row]="(results.data.indexOf(row) % 2 === 0)"
+    ></tr>
+  </table>
+</div>
+

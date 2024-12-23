@@ -1,0 +1,22 @@
+<div class="add-question-container">
+    <h2>Add a Question</h2>
+    <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="questionTitle">Question Title</label>
+        <input id="questionTitle" formControlName="questionTitle" type="text" placeholder="Question Text" class="form-control" />
+      </div>
+  
+      <div class="form-group" *ngFor="let option of options; let i = index">
+        <label for="{{ 'option' + i }}">Option {{ option }}</label>
+        <input id="{{ 'option' + i }}" [formControlName]="'option' + i" type="text" placeholder="Option {{ option }}" class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label for="correctOption">Correct Option</label>
+        <input id="correctOption" formControlName="correctOption" type="text" placeholder="Correct Option" class="form-control" />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

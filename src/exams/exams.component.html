@@ -1,0 +1,51 @@
+<!-- @ dscription Here....
+ This IS A Description For Starndered Question .....
+ Question Section -->
+<!-- <div class="container"> 
+    <div class="Card">
+        <div class="card-header">
+            <h5> {{ AllExam.title}}</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text"><span style="color: red; font-weight: bold;"> Question :- </span>{{AllExam.questions}}</p>
+            <p class="card-text"> <span style="color: red; font-weight: bold;"> Answers :- </span>{{AllExam.answers}}</p>
+            <p class="card-text"><span style="color: red; font-weight: bold;"> result:- </span>{{AllExam.result}}</p>
+            <p class="card-text"><span style="color: red; font-weight: bold;">  category :- </span>{{AllExam.category}}</p>
+        </div>
+        <div class="card-footer"> 
+            <button type="button" class="btn btn-success">update</button>
+            <button type="button" class="btn btn-danger">Delet</button>
+        </div>
+    </div>
+</div> -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-7">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-header bg-primary text-white text-center">
+            <h5>{{ AllExam.title }}</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              <strong style="color: #007bff;">Question:</strong> {{ AllExam.questions.join(', ') }}
+            </p>
+            <p class="card-text">
+              <strong style="color: #28a745;">Answers:</strong> {{ AllExam.answers.join(', ') }}
+            </p>
+            <p class="card-text">
+              <strong style="color: #dc3545;">Result:</strong> {{ AllExam.result }}
+            </p>
+            <p class="card-text">
+              <strong style="color: #ffc107;">Category:</strong> {{ AllExam.category }}
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-between">
+            <button type="button" class="btn btn-sm btn-primary">View</button>
+            <button type="button" class="btn btn-sm btn-success">Update</button>
+            <button type="button" class="btn btn-sm btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

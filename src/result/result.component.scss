@@ -1,0 +1,38 @@
+// .result-container {
+//     margin: 20px;
+//     padding: 10px;
+//   }
+  
+//   table {
+//     width: 100%;
+//   }
+  
+//   th.mat-header-cell,
+//   td.mat-cell {
+//     text-align: center;
+//   }
+  
+
+.result-container {
+  margin: 20px;
+  padding: 10px;
+}
+
+.mat-row {
+  background-color: #ffffff;
+}
+th{
+  font-weight: bold;
+}
+.mat-row.alt-row {
+  background-color: #f9f9f9;
+}
+
+.mat-header-row {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+.mat-paginator {
+  margin-top: 10px;
+}
